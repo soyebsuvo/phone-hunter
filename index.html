@@ -12,10 +12,26 @@
 
 <body>
     <header>
-        <h2>Phone hunter</h2>
+        
     </header>
-    <main>
-
+    <main class="px-32 py-10">
+        <section>
+            <div class="relative mb-10">
+                <input id="searchField" type="text" placeholder="Search Phones....." class="input input-bordered w-full pr-16" /> 
+                <button onclick="handleSearch()" class="btn btn-primary absolute top-0 right-0 rounded-l-none">Search</button>
+              </div>
+        </section>
+        <section>
+            <div id="spinnerHandle" class="text-center my-20 hidden">
+                <span class="loading text-5xl loading-spinner loading-lg"></span>
+            </div>
+            <div id="phones-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+                
+            </div>
+            <div class="mt-5 hidden text-center" id="showAllButton">
+                <button onclick="handelShowAll()" class="btn btn-primary">Show All</button>
+            </div>
+        </section>
     </main>
     <script src="js/phone.js"></script>
 </body>
